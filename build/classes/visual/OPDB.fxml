@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="821.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.OPDBController">
+   <left>
+      <ListView fx:id="dateList" onKeyPressed="#deleteKeySelectedHandler" onMouseClicked="#listMouseSelectHandler" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <TableView fx:id="serviceTable" prefHeight="664.0" prefWidth="714.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="qntColumn" editable="false" prefWidth="119.0" resizable="false" text="Quantidade" />
+          <TableColumn fx:id="descColumn" editable="false" prefWidth="422.0" resizable="false" text="Descricão" />
+            <TableColumn fx:id="priceColumn" editable="false" prefWidth="121.0" resizable="false" text="Preco" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <AnchorPane prefHeight="157.0" prefWidth="1032.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="157.0" fitWidth="1069.0">
+               <image>
+                  <Image url="@header.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="123.0" text="Matrícula:" underline="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchBar" layoutX="85.0" layoutY="118.0" onKeyPressed="#textFieldKeyHandler">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Button fx:id="searchButton" layoutX="265.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleSearchButton" text="Pesquisar">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="addButton" layoutX="355.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleAddButton" text="Adicionar Servico">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <right>
+      <AnchorPane prefHeight="664.0" prefWidth="206.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Km's percorridos:" underline="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="102.0" prefHeight="47.0" prefWidth="159.0" text="Mudancas de Correia de Distribuicão: " underline="true" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="589.0" text="Total:" underline="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="kmLabel" layoutX="14.0" layoutY="40.0" prefHeight="30.0" prefWidth="175.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="beltDates" alignment="TOP_LEFT" layoutX="14.0" layoutY="158.0" prefHeight="426.0" prefWidth="161.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalLabel" layoutX="15.0" layoutY="613.0" prefHeight="30.0" prefWidth="180.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
