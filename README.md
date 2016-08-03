@@ -1,5 +1,5 @@
 # OPDB
-Simple program to stores services in a car office (www.oliveirasepedro.pt/)
+Simple program to store services in a car office (www.oliveirasepedro.pt/)
 
 Main Features:
   - Simple and easy to use program, for people that don't how to use databases.
